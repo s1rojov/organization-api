@@ -1,7 +1,8 @@
-import express from "express";
+import express, { Express, Request, Response } from "express";
 import dotenv from "dotenv";
-import router from "./src/routes/index.js";
-const app = express();
+import router from "./src/routes/index";
+const app: Express = express();
+const PORT = 4000;
 
 dotenv.config();
 
@@ -9,8 +10,6 @@ dotenv.config();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", router);
-
-const PORT = 3000;
 
 app.listen(PORT, () => {
   console.log(`Project is running on port ${PORT}`);

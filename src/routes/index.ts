@@ -3,6 +3,6 @@ import orgRouter from "./organization";
 
 const router = express.Router();
 
-// router.use("/organization", orgRouter);
+router.use("/organization", orgRouter);
 
 export default router;

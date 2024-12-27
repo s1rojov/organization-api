@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
-import GetList from "@/services/organization";
+// import GetList from "@/services/organization";
+import GetList from "../services/organization";
 
 export async function fetchOrganizations(
   req: Request,
