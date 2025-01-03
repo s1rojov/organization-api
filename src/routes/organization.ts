@@ -1,8 +1,15 @@
 import express from "express";
-// import { fetchOrganizations } from "@/controllers/organization";
-import { fetchOrganizations } from "../controllers/organization";
+import {
+  GetOrganizations,
+  CreateOrganizations,
+  UpdateOrganizations,
+  DeleteOrganizations,
+} from "../controllers/organization";
 
 const orgRouter = express.Router();
-orgRouter.get("/GetList", fetchOrganizations);
+orgRouter.get("/GetList", GetOrganizations);
+orgRouter.post("/Create", CreateOrganizations);
+orgRouter.patch("/Update", UpdateOrganizations);
+orgRouter.delete("/Delete", DeleteOrganizations);
 
 export default orgRouter;
