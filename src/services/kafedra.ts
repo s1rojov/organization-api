@@ -49,7 +49,7 @@ async function Update(data: Partial<KafedraDTO>): Promise<KafedraDTO> {
       short_name = COALESCE($2, short_name),
       faculty_id = COALESCE($3, faculty_id)
     WHERE id = $4
-    RETURNING id, full_name, short_name, faculty_id;
+    RETURNING *;
   `;
 
   try {

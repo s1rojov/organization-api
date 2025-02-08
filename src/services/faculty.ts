@@ -25,7 +25,7 @@ async function Create(data: FacultyDTO): Promise<FacultyDTO> {
   const query = `
     INSERT INTO faculty (full_name, short_name, organization_id)
     VALUES ($1, $2, $3)
-    RETURNING id, full_name, short_name, organization_id;
+    RETURNING *;
   `;
   try {
     const result: any = await pool.query(query, [

@@ -5,10 +5,10 @@ interface Employee {
   first_name: string;
   middle_name: string;
   last_name: string;
-  kafedra_id: number;
-  kafedra_name: string;
-  department_id: number;
-  department_name: string;
+  kafedra_id: number | null;
+  kafedra_name: string | null;
+  department_id: number | null;
+  department_name: string | null;
   rate: number;
 }
 
@@ -17,10 +17,10 @@ class EmployeeDTO {
   firstName!: string;
   lastName!: string;
   middleName!: string;
-  kafedraId!: number;
-  kafedraName!:string | null
-  departmentId!: number;
-  departmentName!: string| null
+  kafedraId!: number | null;
+  kafedraName!: string | null;
+  departmentId!: number | null;
+  departmentName!: string | null;
   rate!: number;
 
   constructor(data: Employee) {
@@ -29,9 +29,9 @@ class EmployeeDTO {
     this.lastName = data.last_name;
     this.middleName = data.middle_name;
     this.kafedraId = data.kafedra_id;
-    this.kafedraName = data.kafedra_name
+    this.kafedraName = data.kafedra_name;
     this.departmentId = data.department_id;
-    this.departmentName = data.department_name
+    this.departmentName = data.department_name;
     this.rate = data.rate;
   }
 }
