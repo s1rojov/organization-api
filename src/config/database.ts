@@ -5,7 +5,7 @@ const pool: any = new Pool({
   database: "koyebdb",
   password: "npg_28RGpWVemXqb",
   port: 8000,
-  ssl: true,
+  // ssl: true,
 });
 
 export default pool;
