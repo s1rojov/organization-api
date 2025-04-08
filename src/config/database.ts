@@ -1,11 +1,10 @@
 import { Pool } from "pg";
 const pool: any = new Pool({
-  user: "koyeb",
-  host: "ep-lingering-cloud-a2t040wd.eu-central-1.pg.koyeb.app",
-  database: "koyebdb",
-  password: "npg_RnbokFOG4j8V",
+  user: "postgres",
+  host: "localhost",
+  database: "organization",
+  password: "123",
   port: 5432,
-  ssl: { rejectUnauthorized: false },
 });
 
 pool
